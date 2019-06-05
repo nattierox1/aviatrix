@@ -22,7 +22,7 @@ func gauges(myPlane : Aviatrix) {
 
 func fly(myPlane : Aviatrix) {
     print("Where would you like to fly to? ")
-    print(" ")
+    print("")
     let destinations = myPlane.knownDestinations()
     
     for (index, city) in destinations.enumerated() {
@@ -74,9 +74,9 @@ func fuelCheck(myPlane : Aviatrix, destination : String) -> Bool {
     return true
 }
 
-var plane = Aviatrix()
+var plane = Aviatrix(authorsName: "Nataleigh Liddy" )
 
-print("Welcome to the Aviatrix Flight System by _________")
+print("Welcome to the Aviatrix Flight System by \(plane.author).")
 plane.start()
 
 print("You're currently in _________")
@@ -110,3 +110,5 @@ while command != "q" {
 
 print(" ")
 print("Thanks for flying with _________ airline!")
+
+
